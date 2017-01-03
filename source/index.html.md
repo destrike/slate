@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: MYSALE Marketplace API Documentation UI
 
 language_tabs:
   - shell

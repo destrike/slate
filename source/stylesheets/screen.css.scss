@@ -55,6 +55,19 @@ html, body {
     $nav-subitem-bg;
 }
 
+.tocify {
+  background-color: #3d5160;
+    &-image-bg {
+      background-color: #394b5a;
+      padding: 15px 0;
+         &>img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
 .tocify-wrapper {
   transition: left 0.3s ease-in-out;
 
@@ -68,7 +81,8 @@ html, body {
   width: $nav-width;
   background-color: $nav-bg;
   font-size: 13px;
-  font-weight: bold;
+  font-family: 'LatoBold';
+  font-weight: bold; 
 
   // language selector for mobile devices
   .lang-selector {
@@ -83,10 +97,14 @@ html, body {
   &>img {
     display: block;
     max-width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   &>.search {
     position: relative;
+    background-color: #3d5160;
 
     input {
       background: $nav-bg;
@@ -123,9 +141,11 @@ html, body {
     transition-property: height, margin;
     transition-duration: 180ms;
     transition-timing-function: ease-in-out;
+    background-color: #3d5160;
     &.visible {
       height: 30%;
       margin-bottom: 1em;
+      background-color: #3d5160;
     }
 
     @include embossed-bg;
@@ -152,6 +172,7 @@ html, body {
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    //webkit-text-stroke-width: 0px;
   }
 
   // The Table of Contents is composed of multiple nested
@@ -161,7 +182,8 @@ html, body {
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 28px;
+    line-height: 45px;
+    border-bottom: 0.5px solid $nav-active-bg;
   }
 
   li {
@@ -173,7 +195,6 @@ html, body {
 
   // This is the currently selected ToC entry
   .tocify-focus {
-    box-shadow: 0px 1px 0px $nav-active-shadow;
     background-color: $nav-active-bg;
     color: $nav-active-text;
   }
@@ -200,6 +221,8 @@ html, body {
     padding: 1em 0;
     margin-top: 1em;
     border-top: 1px dashed $nav-footer-border-color;
+    background-color: #3d5160;
+    display: none;
 
     li,a {
       color: $nav-text;
@@ -328,6 +351,12 @@ html, body {
   position: relative;
   z-index: 30;
 
+  a {
+    text-decoration: none;
+    color: #959595;
+    font-weight: bold;
+  }
+
   &:after {
     content: '';
     display: block;
@@ -355,13 +384,14 @@ html, body {
 
   h1 {
     @extend %header-font;
-    font-size: 30px;
+    font-size: 21px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #e5e5e5;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #e5e5e5;
+    color: #636363; 
     background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   }
 
@@ -377,7 +407,8 @@ html, body {
     margin-bottom: 0;
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
-    padding-bottom: 1.2em;
+    color: #636363; 
+    padding-bottom: 0.1em;
     background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
   }
 
@@ -388,11 +419,15 @@ html, body {
     border-top: none;
   }
 
+  h3 {
+    color: #636363; 
+  }
+
   h3, h4, h5, h6 {
     @extend %header-font;
     font-size: 15px;
     margin-top: 2.5em;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.3em;
   }
 
   h4, h5, h6 {
@@ -408,6 +443,14 @@ html, body {
   table {
     margin-bottom: 1em;
     overflow: auto;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    padding: 0;
+    margin-left: 28px;
+    max-width: 504px;
+    width: 100%;
+
     th,td {
       text-align: left;
       vertical-align: top;
@@ -415,17 +458,23 @@ html, body {
     }
 
     th {
-      padding: 5px 10px;
-      border-bottom: 1px solid #ccc;
+      padding: 15px 10px;
+      border-bottom: 1px solid #e5e5e5;
       vertical-align: bottom;
+      color: #969696;
     }
 
     td {
-      padding: 10px;
+      padding: 15px 10px;
+      color: #767676;
+    }
+
+    tr {
+      border-bottom: 1px solid #ccc;
     }
 
     tr:last-child {
-      border-bottom: 1px solid #ccc;
+      border-bottom: 0px solid #ccc;
     }
 
     tr:nth-child(odd)>td {
@@ -448,6 +497,7 @@ html, body {
   p, li, dt, dd {
     line-height: 1.6;
     margin-top: 0;
+    color: #959595;
   }
 
   img {

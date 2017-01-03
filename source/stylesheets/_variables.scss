@@ -21,19 +21,107 @@ under the License.
 // Use these settings to help adjust the appearance of Slate
 
 
+// FONTFACE
+////////////////////
+
+@font-face {
+  font-family: 'Lato';
+  src:font-url('Lato-Regular.eot?-syv14m');
+  src:font-url('Lato-Regular.eot?#iefix-syv14m') format('embedded-opentype'),
+    font-url('Lato-Regular.svg?-syv14m#slate') format('svg'),
+    font-url('Lato-Regular.woff2?-syv14m') format('woff2'),
+    font-url('Lato-Regular.woff?-syv14m') format('woff'),
+    font-url('Lato-Regular.ttf?-syv14m') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoItalic';
+  src:font-url('Lato-Italic.eot?-syv14m');
+  src:font-url('Lato-Italic.eot?#iefix-syv14m') format('embedded-opentype'),
+    font-url('Lato-Italic.woff2?-syv14m') format('woff2'),
+    font-url('Lato-Italic.woff?-syv14m') format('woff'),
+    font-url('Lato-Italic.ttf?-syv14m') format('truetype'),
+    font-url('Lato-Italic.svg?-syv14m#slate') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoBold';
+  src:font-url('Lato-Bold.eot?-syv14m');
+  src:font-url('Lato-Bold.eot?#iefix-syv14m') format('embedded-opentype'),
+    font-url('Lato-Bold.woff2?-syv14m') format('woff2'),
+    font-url('Lato-Bold.woff?-syv14m') format('woff'),
+    font-url('Lato-Bold.ttf?-syv14m') format('truetype'),
+    font-url('Lato-Bold.svg?-syv14m#slate') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoSemibold';
+  src:font-url('Lato-Semibold.eot?-syv14m');
+  src:font-url('Lato-Semibold.eot?#iefix-syv14m') format('embedded-opentype'),
+    font-url('Lato-Semibold.woff2?-syv14m') format('woff2'),
+    font-url('Lato-Semibold.woff?-syv14m') format('woff'),
+    font-url('Lato-Semibold.ttf?-syv14m') format('truetype'),
+    font-url('Lato-Semibold.svg?-syv14m#slate') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoSemiboldItalic';
+  src:font-url('Lato-SemiboldItalic.eot?-syv14m');
+  src:font-url('Lato-SemiboldItalic.eot?#iefix-syv14m') format('embedded-opentype'),
+    font-url('Lato-SemiboldItalic.woff2?-syv14m') format('woff2'),
+    font-url('Lato-SemiboldItalic.woff?-syv14m') format('woff'),
+    font-url('Lato-SemiboldItalic.ttf?-syv14m') format('truetype'),
+    font-url('Lato-SemiboldItalic.svg?-syv14m#slate') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoMedium';
+  src:font-url('Lato-Medium.eot?-syv14m');
+  src:font-url('Lato-Medium.eot?#iefix-syv14m') format('embedded-opentype'),
+    font-url('Lato-Medium.woff2?-syv14m') format('woff2'),
+    font-url('Lato-Medium.woff?-syv14m') format('woff'),
+    font-url('Lato-Medium.ttf?-syv14m') format('truetype'),
+    font-url('Lato-Medium.svg?-syv14m#slate') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoHeavy';
+  src:font-url('Lato-Heavy.eot?-syv14m');
+  src:font-url('Lato-Heavy.eot?#iefix-syv14m') format('embedded-opentype'),
+    font-url('Lato-Heavy.woff2?-syv14m') format('woff2'),
+    font-url('Lato-Heavy.woff?-syv14m') format('woff'),
+    font-url('Lato-Heavy.ttf?-syv14m') format('truetype'),
+    font-url('Lato-Heavy.svg?-syv14m#slate') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #393939 !default;
+$nav-bg: #3d5160 !default;
 $examples-bg: #393939 !default;
 $code-bg: #292929 !default;
 $code-annotation-bg: #1c1c1c !default;
-$nav-subitem-bg: #262626 !default;
-$nav-active-bg: #2467af !default;
+$nav-subitem-bg: #354857 !default;
+$nav-active-bg: #354857 !default;
 $lang-select-border: #000 !default;
 $lang-select-bg: #222 !default;
 $lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
 $lang-select-pressed-bg: #111 !default; // color of language tab bg when mouse is pressed
-$main-bg: #eaf2f6 !default;
+$main-bg: #f5f7f7 !default;
 $aside-notice-bg: #8fbcd4 !default;
 $aside-warning-bg: #c97a7e !default;
 $aside-success-bg: #6ac174 !default;
@@ -68,12 +156,16 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 // FONTS
 ////////////////////
 %default-font {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-family: 'Lato';
   font-size: 13px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 %header-font {
   @extend %default-font;
+  font-family: 'LatoBold';
   font-weight: bold;
 }
 
