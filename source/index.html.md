@@ -120,7 +120,9 @@ This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+<span class="special-highlight get">get</span>`http://example.com/api/kittens`
+
+<span class="special-highlight post">post</span>`http://example.com/api/kittens`
 
 ### Query Parameters
 
