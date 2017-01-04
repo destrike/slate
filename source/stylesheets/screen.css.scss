@@ -80,7 +80,7 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  font-size: 13px;
+  font-size: 14px;
   //font-family: 'LatoBold';
   //font-weight: bold; 
 
@@ -188,7 +188,7 @@ html, body {
   }
 
   ul {
-     border-bottom: 1px solid $nav-active-bg;   
+     border-bottom: 1px solid rgba(54, 67, 77, 0.5);   
   }
 
   li {
@@ -213,7 +213,7 @@ html, body {
     font-weight: 500;
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
-      font-size: 12px;
+      font-size: 14px;
     }
 
     // for embossed look:
@@ -320,6 +320,8 @@ html, body {
   background-color: $lang-select-bg;
   width: 100%;
   font-weight: bold;
+  font-family: 'LatoHeavy';
+  font-size: 14px;
   a {
     display: block;
     float:left;
@@ -359,8 +361,9 @@ html, body {
 
   a {
     text-decoration: none;
-    color: #959595;
-    font-weight: bold;
+    color: #00a6b4;
+    font-weight: normal;
+    font-size: 14px;
   }
 
   &:after {
@@ -370,8 +373,8 @@ html, body {
   }
 
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
-    margin-right: $examples-width;
-    padding: 0 $main-padding;
+    margin-right: 53%;
+    margin-left: 3%;
     box-sizing: border-box;
     display: block;
     text-shadow: $main-embossed-text-shadow;
@@ -390,15 +393,15 @@ html, body {
 
   h1 {
     @extend %header-font;
-    font-size: 21px;
-    padding-top: 0.5em;
+    font-size: 20px;
+    padding-top: 34px;
     padding-bottom: 0.5em;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 0px solid #e5e5e5;
     margin-bottom: $h1-margin-bottom;
-    margin-top: 2em;
-    border-top: 1px solid #e5e5e5;
-    color: #636363; 
-    background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+    margin-top: 0em;
+    color: #525252;
+    font-family: 'LatoSemibold'; 
+    //background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   }
 
   h1:first-child, div:first-child + h1 {
@@ -411,7 +414,6 @@ html, body {
     font-size: 20px;
     margin-top: 4em;
     margin-bottom: 0;
-    border-top: 1px solid #ccc;
     padding-top: 1.2em;
     color: #636363; 
     padding-bottom: 0.1em;
@@ -426,14 +428,15 @@ html, body {
   }
 
   h3 {
-    color: #636363; 
+    color: #525252; 
   }
 
   h3, h4, h5, h6 {
     @extend %header-font;
-    font-size: 15px;
+    font-family: 'LatoMedium';
+    font-size: 16px;
     margin-top: 2.5em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.7em;
   }
 
   h4, h5, h6 {
@@ -441,9 +444,11 @@ html, body {
   }
 
   hr {
-    margin: 2em 0;
-    border-top: 2px solid $examples-bg;
-    border-bottom: 2px solid $main-bg;
+    margin: 48px 0 0 0;
+    border-top: 1px solid #E2E2E2;
+    border-bottom: 0px solid #ffffff;
+    margin-right: 50%;
+    margin-left: 3%;
   }
 
   table {
@@ -453,26 +458,32 @@ html, body {
     border: 1px solid #e5e5e5;
     background-color: #ffffff;
     padding: 0;
-    margin-left: 28px;
-    max-width: 504px;
-    width: 100%;
+    min-width: 8px;
+    border-collapse: collapse;
+    overflow-x: auto;
+    border-radius: 4px;
 
     th,td {
       text-align: left;
       vertical-align: top;
       line-height: 1.6;
+      min-width: 8px;
+      max-width: none;
+      width: 1%;
     }
 
     th {
-      padding: 15px 10px;
+      padding: 23px 23px;
       border-bottom: 1px solid #e5e5e5;
       vertical-align: bottom;
-      color: #969696;
+      font-family: 'LatoSemibold';
+      color: #888888;
     }
 
     td {
-      padding: 15px 10px;
-      color: #767676;
+      padding: 23px 23px;
+      color: #525252;
+      font-size: 13px;
     }
 
     tr {
@@ -512,8 +523,8 @@ html, body {
 
   code {
     background-color: rgba(0,0,0,0.05);
-    padding: 3px;
-    border-radius: 3px;
+    padding: 4px;
+    border-radius: 1px;
     @extend %break-words;
     @extend %code-font;
   }
@@ -524,25 +535,27 @@ html, body {
   }
 
   aside {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 1.1em 1.4em 1.1em 1.4em;
     text-shadow: 0 1px 0 lighten($aside-notice-bg, 15%);
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
     line-height: 1.6;
-    max-width: 504px;
-    width: 100%;
-    margin-left: 28px;
+    min-width: 504px;
+    border-radius: 1px;
+    color:#84A3AC;
+    font-family: 'LatoMedium';
 
     &.warning {
       background-color: $aside-warning-bg;
       text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
+      color:#A58181;
     }
 
     &.success {
       background-color: $aside-success-bg;
       text-shadow: 0 1px 0 lighten($aside-success-bg, 15%);
+      color:#84AC91;
     }
   }
 
@@ -572,32 +585,69 @@ html, body {
     text-shadow: 1px 1px 0 #666;
     background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
   }
+
+  .code-highlight {
+    background-color: #f0f0f0;
+    padding: 13px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .code-high {
+    padding: 4px;
+    border-radius: 1px;
+    background-color: #B5DBE5;
+    font-size: 14px;
+    @extend %break-words;
+    @extend %code-font;
+  }
+
 }
 
+.highlight-container {
+    padding: 6px 6px;
+    text-shadow: 0 1px 0 #fdfefe;
+    margin-bottom: 0.5em;
+    background: #f0f0f0;
+    line-height: 1.6;
+    min-width: 475px;
+    border-radius: 4px;
+    color: #959595;
+    font-family: 'LatoMedium';
+    display: block;
+    font-size: 12px;
+}
 .special-highlight {
-  padding: 3px 5px 2px 5px;
-  min-width: 76px;
-  border-radius: 3px;
+  padding: 9px 0;
+  min-width: 58px;
+  border-radius: 4px;
   display: inline-block;
   font-size: 11px;
-  font-family: 'LatoBold';
+  font-family: 'Lato';
   line-height: 99%;
   margin: 0;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 10px;
+  color: #ffffff;
 }
 .get {
-      color: #594300;
-      background-color: #ffd351;
-      border-color: #ffd351;
+      background-color: #00A6B4;
+      border-color: #00A6B4;
     }
-    .post {
-      color: #ffffff;
-      background-color: #4a6785;
-      border-color: #4a6785;
+.post {
+      background-color: #5CE791;
+      border-color: #5CE791;
+}
+.delete {
+      background-color: #F16B55;
+      border-color: #F16B55;
     }
+.put {
+      background-color: #FFC300;
+      border-color: #FFC300;
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // CODE SAMPLE STYLES
@@ -639,7 +689,8 @@ html, body {
       background-color: $code-annotation-bg;
       border-radius: 5px;
       padding: $code-annotation-padding;
-      color: #ccc;
+      color: #ffffff;
+      font-family: 'LatoMedium';
     }
   }
 }
@@ -701,7 +752,8 @@ html, body {
 }
 
 .highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #909090;
+  color: #B6B6B6;
+  font-size: 14px;
 }
 
 .highlight, .highlight .w {
