@@ -25,6 +25,8 @@ We have language bindings in Shell, Ruby, and Python! You can view code examples
 
 This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
+<hr>
+
 # Authentication
 
 > To authorize, use this code:
@@ -59,11 +61,13 @@ Kittn uses API keys to allow access to the API. You can register a new Kittn API
 
 Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+<span class="code-highlight">Authorization: meowmeowmeow</span>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <span class="code-high">meowmeowmeow</span> with your personal API key.
 </aside>
+
+<hr>
 
 # Kittens
 
@@ -120,7 +124,13 @@ This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+<span class="highlight-container"><span class="special-highlight post">post</span>http://example.com/api/kittens</span>
+
+<span class="highlight-container"><span class="special-highlight get">get</span>http://example.com/api/kittens</span>
+
+<span class="highlight-container"><span class="special-highlight delete">delete</span>http://example.com/api/kittens</span>
+
+<span class="highlight-container"><span class="special-highlight put">put</span>http://example.com/api/kittens</span>
 
 ### Query Parameters
 
@@ -175,7 +185,7 @@ let max = api.kittens.get(2);
 
 This endpoint retrieves a specific kitten.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use &lt;code&gt; blocks to denote code.</aside>
 
 ### HTTP Request
 

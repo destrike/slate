@@ -114,25 +114,25 @@ under the License.
 $nav-bg: #3d5160 !default;
 $examples-bg: #3d5160 !default;
 $code-bg: #354857 !default;
-$code-annotation-bg: #3d5160 !default;
+$code-annotation-bg: #31404c !default;
 $nav-subitem-bg: #354857 !default;
 $nav-active-bg: #354857 !default;
 $lang-select-border: #000 !default;
 $lang-select-bg: #394b5a !default;
 $lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
 $lang-select-pressed-bg: #394b5a !default; // color of language tab bg when mouse is pressed
-$main-bg: #f5f7f7 !default;
-$aside-notice-bg: #8fbcd4 !default;
-$aside-warning-bg: #c97a7e !default;
-$aside-success-bg: #6ac174 !default;
+$main-bg: #ffffff !default;
+$aside-notice-bg: #C1E4EE !default;
+$aside-warning-bg: #EEC1C1 !default;
+$aside-success-bg: #C1EECC !default;
 $search-notice-bg: #c97a7e !default;
 
 
 // TEXT COLORS
 ////////////////////
 $main-text: #333 !default; // main content text color
-$nav-text: #fff !default;
-$nav-active-text: #fff !default;
+$nav-text: #DFDFDF !default;
+$nav-active-text: #DFDFDF !default;
 $lang-select-text: #fff !default; // color of unselected language tab text
 $lang-select-active-text: #fff !default; // color of selected language tab text
 $lang-select-pressed-text: #fff !default; // color of language tab text when mouse is pressed
@@ -147,7 +147,7 @@ $main-padding: 28px !default; // padding to left and right of content & examples
 $nav-padding: 15px !default; // padding to left and right of navbar
 $nav-v-padding: 10px !default; // padding used vertically around search boxes and results
 $nav-indent: 10px !default; // extra padding for ToC subitems
-$code-annotation-padding: 13px !default; // padding inside code annotations
+$code-annotation-padding: 15px !default; // padding inside code annotations
 $h1-margin-bottom: 21px !default; // padding under the largest header tags
 $tablet-width: 930px !default; // min width before reverting to tablet size
 $phone-width: $tablet-width - $nav-width !default; // min width before reverting to mobile size
@@ -157,7 +157,7 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 ////////////////////
 %default-font {
   font-family: 'Lato';
-  font-size: 13px;
+  font-size: 14px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -170,7 +170,7 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 }
 
 %code-font {
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-family:'Lato';
   font-size: 12px;
   line-height: 1.5;
 }
