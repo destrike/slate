@@ -184,8 +184,11 @@ html, body {
     margin: 0;
     padding: 0;
     line-height: 55px;
-    border-bottom: 0.5px solid $nav-active-bg;
     font-size: 15px;
+  }
+
+  ul {
+     border-bottom: 1px solid $nav-active-bg;   
   }
 
   li {
