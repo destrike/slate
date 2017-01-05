@@ -132,6 +132,8 @@ This endpoint retrieves all kittens.
 
 <span class="highlight-container"><span class="special-highlight put">put</span>http://example.com/api/kittens</span>
 
+<span class="highlight-container"><span class="special-highlight patch">patch</span>http://example.com/api/kittens</span>
+
 ### Query Parameters
 
 Parameter | Default | Description
@@ -185,11 +187,19 @@ let max = api.kittens.get(2);
 
 This endpoint retrieves a specific kitten.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use &lt;code&gt; blocks to denote code.</aside>
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <span class="code-high">&lt;code&gt;</span> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+<span class="highlight-container"><span class="special-highlight post">post</span>http://example.com/api/kittens</span>
+
+<span class="highlight-container"><span class="special-highlight get">get</span>http://example.com/api/kittens</span>
+
+<span class="highlight-container"><span class="special-highlight delete">delete</span>http://example.com/api/kittens</span>
+
+<span class="highlight-container"><span class="special-highlight put">put</span>http://example.com/api/kittens</span>
+
+<span class="highlight-container"><span class="special-highlight patch">patch</span>http://example.com/api/kittens</span>
 
 ### URL Parameters
 

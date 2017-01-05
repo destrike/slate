@@ -596,7 +596,7 @@ html, body {
   .code-high {
     padding: 4px;
     border-radius: 1px;
-    background-color: #B5DBE5;
+    background-color: rgba(0, 0, 0, 0.09);
     font-size: 14px;
     @extend %break-words;
     @extend %code-font;
@@ -645,8 +645,13 @@ html, body {
       border-color: #F16B55;
     }
 .put {
-      background-color: #FFC300;
-      border-color: #FFC300;
+      background-color: #a36d8d;
+      border-color: #a36d8d;
+}
+
+.patch {
+      background-color: #E09D43;
+      border-color: #E09D43;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
