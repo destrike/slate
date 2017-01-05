@@ -124,15 +124,15 @@ This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-<span class="highlight-container"><span class="special-highlight post">post</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="post">post</span>http://example.com/api/kittens</span>
 
-<span class="highlight-container"><span class="special-highlight get">get</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="get">get</span>http://example.com/api/kittens</span>
 
-<span class="highlight-container"><span class="special-highlight delete">delete</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="delete">delete</span>http://example.com/api/kittens</span>
 
-<span class="highlight-container"><span class="special-highlight put">put</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="put">put</span>http://example.com/api/kittens</span>
 
-<span class="highlight-container"><span class="special-highlight patch">patch</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="patch">patch</span>http://example.com/api/kittens</span>
 
 ### Query Parameters
 
@@ -191,15 +191,15 @@ This endpoint retrieves a specific kitten.
 
 ### HTTP Request
 
-<span class="highlight-container"><span class="special-highlight post">post</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="post">post</span>http://example.com/api/kittens</span>
 
-<span class="highlight-container"><span class="special-highlight get">get</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="get">get</span>http://example.com/api/kittens</span>
 
-<span class="highlight-container"><span class="special-highlight delete">delete</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="delete">delete</span>http://example.com/api/kittens</span>
 
-<span class="highlight-container"><span class="special-highlight put">put</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="put">put</span>http://example.com/api/kittens</span>
 
-<span class="highlight-container"><span class="special-highlight patch">patch</span>http://example.com/api/kittens</span>
+<span class="highlight-container"><span class="patch">patch</span>http://example.com/api/kittens</span>
 
 ### URL Parameters
 
