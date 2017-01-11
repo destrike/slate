@@ -3,9 +3,6 @@ title: MYSALE Marketplace API Documentation UI
 
 language_tabs:
   - shell
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -19,29 +16,158 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
-
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Welcome to the MYSALE Marketplace Documentation. This documentation contain guidelines that will help you in putting the right code in creating the documentation page.
 
 <hr>
 
-# Authentication
+# Highlighting
 
-> To authorize, use this code:
+Code:
 
-```ruby
-require 'kittn'
+<span class="code-highlight">&lt;span class="code-highlight"&gt;Authorization: meowmeowmeow&lt;/span&gt;</span>
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+Result:
 
-```python
-import kittn
+<span class="code-highlight">Authorization: meowmeowmeow</span>
 
-api = kittn.authorize('meowmeowmeow')
-```
+Code:
+
+<span class="code-highlight">&lt;aside class="notice"&gt;
+Remember — a happy &lt;span class="code-high"&gt;kitten&lt;/span&gt; is an authenticated kitten!
+&lt;/aside&gt;</span>
+
+Result:
+
+<aside class="notice">
+Remember — a happy <span class="code-high">kitten</span> is an authenticated kitten!
+</aside>
+
+<hr>
+
+# HTTP Verbs
+
+Code:
+
+<span class="code-highlight">&lt;span class="highlight-container"&gt;&lt;span class="post"&gt;post&lt;/span&gt;http://example.com/api/kittens&lt;/span&gt;</span>
+
+Result:
+
+<span class="highlight-container"><span class="post">post</span>http://example.com/api/kittens</span>
+
+<aside class="notice">
+You can replace &lt;span class="post"&gt;post&lt;/span&gt; with the following http verbs for intended purpose.
+</aside>
+
+Code:
+
+<span class="code-highlight">&lt;span class="get"&gt;get&lt;/span&gt;</span>
+
+Result:
+
+<span class="highlight-container"><span class="get">get</span>http://example.com/api/kittens</span>
+
+Code:
+
+<span class="code-highlight">&lt;span class="delete"&gt;delete&lt;/span&gt;</span>
+
+Result:
+
+<span class="highlight-container"><span class="delete">delete</span>http://example.com/api/kittens</span>
+
+Code:
+
+<span class="code-highlight">&lt;span class="put"&gt;put&lt;/span&gt;</span>
+
+Result:
+
+<span class="highlight-container"><span class="put">put</span>http://example.com/api/kittens</span>
+
+Code:
+
+<span class="code-highlight">&lt;span class="patch"&gt;patch&lt;/span&gt;</span>
+
+Result:
+
+<span class="highlight-container"><span class="patch">patch</span>http://example.com/api/kittens</span>
+
+<hr>
+
+# Aside
+
+#### Notice
+Code:
+
+<span class="code-highlight">&lt;aside class="notice"&gt;
+Remember — a happy kitten is an authenticated kitten!
+&lt;/aside&gt;</span>
+
+Result:
+
+<aside class="notice">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+#### Success
+Code:
+
+<span class="code-highlight">&lt;aside class="success"&gt;
+Remember — a happy kitten is an authenticated kitten!
+&lt;/aside&gt;</span>
+
+Result:
+
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+#### Warning
+Code:
+
+<span class="code-highlight">&lt;aside class="warning"&gt;
+Remember — a happy kitten is an authenticated kitten!
+&lt;/aside&gt;</span>
+
+Result:
+
+<aside class="warning">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+<hr>
+
+# Table
+
+Code:
+
+<span class="code-highlight">
+Parameter | Description<br>
+<span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span> | <span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><span>-</span><br>
+ID | The ID of the kitten to retrieve<br>
+</span>
+
+Result:
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to retrieve
+
+
+<hr>
+
+# Shell Code
+
+Code:
+
+<span class="code-highlight">
+&#96;&#96;&#96;<br>
+&#35; With shell, you can just pass the correct header with each request<br>
+curl "api_endpoint_here"<br>
+&#32;<span>-</span>H "Authorization: meowmeowmeow"<br>
+&#96;&#96;&#96;<br>
+</span>
+
+
+> Result:
 
 ```shell
 # With shell, you can just pass the correct header with each request
@@ -49,161 +175,4 @@ curl "api_endpoint_here"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-<span class="code-highlight">Authorization: meowmeowmeow</span>
-
-<aside class="notice">
-You must replace <span class="code-high">meowmeowmeow</span> with your personal API key.
-</aside>
-
 <hr>
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-<span class="highlight-container"><span class="post">post</span>http://example.com/api/kittens</span>
-
-<span class="highlight-container"><span class="get">get</span>http://example.com/api/kittens</span>
-
-<span class="highlight-container"><span class="delete">delete</span>http://example.com/api/kittens</span>
-
-<span class="highlight-container"><span class="put">put</span>http://example.com/api/kittens</span>
-
-<span class="highlight-container"><span class="patch">patch</span>http://example.com/api/kittens</span>
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <span class="code-high">&lt;code&gt;</span> blocks to denote code.</aside>
-
-### HTTP Request
-
-<span class="highlight-container"><span class="post">post</span>http://example.com/api/kittens</span>
-
-<span class="highlight-container"><span class="get">get</span>http://example.com/api/kittens</span>
-
-<span class="highlight-container"><span class="delete">delete</span>http://example.com/api/kittens</span>
-
-<span class="highlight-container"><span class="put">put</span>http://example.com/api/kittens</span>
-
-<span class="highlight-container"><span class="patch">patch</span>http://example.com/api/kittens</span>
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-

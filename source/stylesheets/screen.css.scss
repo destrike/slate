@@ -440,6 +440,7 @@ html, body {
   }
 
   h4 {
+    
     font-size: 15px;
   }
 
@@ -545,7 +546,7 @@ html, body {
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
     line-height: 1.6;
-    min-width: 504px;
+    min-width: 8px;
     border-radius: 1px;
     color:#84A3AC;
     font-family: 'LatoMedium';
@@ -595,6 +596,7 @@ html, body {
     padding: 13px;
     border-radius: 4px;
     font-size: 12px;
+    display: block;
   }
 
   .code-high {
@@ -606,10 +608,11 @@ html, body {
     @extend %code-font;
   }
 
+
 }
 
 .highlight-container {
-    padding: 11px 6px 11px 70px;
+    padding: 11px 6px 11px 65px;
     text-shadow: 0 1px 0 #fdfefe;
     margin-bottom: 0.5em;
     background: #f0f0f0;
@@ -619,15 +622,15 @@ html, body {
     color: #959595;
     font-family: 'LatoMedium';
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     position: relative;
 }
 .special-highlight {
-  padding: 9px 0;
-  min-width: 58px;
+  padding: 3px 0;
+  min-width: 52px;
   border-radius: 4px;
   display: inline-block;
-  font-size: 11px;
+  font-size: 9px;
   font-family: 'Lato';
   line-height: 99%;
   margin: 0;
@@ -640,16 +643,19 @@ html, body {
   left: 6px;
   top: 50%;
   transform: translateY(-50%);
+  text-shadow: none;
 }
 .get {
       @extend .special-highlight;
-      background-color: #00A6B4;
-      border-color: #00A6B4;
+      background-color: #48c14c;
+      border-color: #48c14c;
+      
     }
 .post {
       @extend .special-highlight;
-      background-color: #5CE791;
-      border-color: #5CE791;
+      background-color: #0091b6;
+      border-color: #0091b6;
+      
 }
 .delete {
       @extend .special-highlight;
@@ -777,4 +783,26 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+.highlight .nt {
+  color: #FFFFFF;
+}
+
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+    color: #50AEE8;
+}
+
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #50AEE8;
+}
+
+.highlight .kc {
+    color: #50AEE8;
+}
+
+.highlight.json {
+   .s2 {
+     color:#a6e22e;
+   }
 }
