@@ -1,5 +1,5 @@
 ---
-title: MYSALE Marketplace API Documentation UI
+title: Universal Public Documentation UI
 
 language_tabs:
   - shell
