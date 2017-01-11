@@ -159,6 +159,7 @@ ID | The ID of the kitten to retrieve
 Code:
 
 <span class="code-highlight">
+&gt; Result:<br>
 &#96;&#96;&#96;<br>
 &#35; With shell, you can just pass the correct header with each request<br>
 curl "api_endpoint_here"<br>
